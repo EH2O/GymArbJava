@@ -4,12 +4,16 @@ public class Addition {
 
         int prex =30;
         double start = System.currentTimeMillis();
-        for (int i = 0; i < 1000000000; i++) {
-            x += 1;
-            if(x == prex){
-                x -= 3000;
-                prex = prex*2;
-            }
+        for (int i = 0; i < 10000000; i++) {
+
+
+                if(i % 2 == 0){
+                    x += 203455;
+                }else {
+                    x -= 203455;
+                }
+
+
         }
         double end =(long) ((System.currentTimeMillis() - start));
         System.out.println(x);
