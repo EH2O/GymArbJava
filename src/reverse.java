@@ -7,7 +7,7 @@ public class reverse {
         Scanner in;
         String fill = "src/loremIpsum.txt";
         try {
-            in = new Scanner((new File(fill)));
+            in = new Scanner((new File("src/loremIpsum.txt")));
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
         }
@@ -15,11 +15,10 @@ public class reverse {
         while(in.hasNextLine()){
             data.append(in.nextLine());
         }
-
-        StringBuilder rev = new StringBuilder();
+        String rev = "";
 
         for (int i = 0; i < data.length(); i++) {
-            rev.append(data.charAt(data.length() - i));
+            rev += data.charAt(data.length() - i);
         }
         long test =  System.nanoTime();
         System.out.println(start-test);
