@@ -15,10 +15,10 @@ public class reverse {
         while(in.hasNextLine()){
             data.append(in.nextLine());
         }
-        String rev = "";
+        StringBuilder reva = new StringBuilder();
 
         for (int i = 0; i < data.length(); i++) {
-            rev += data.charAt(data.length() - i);
+            reva.append(data.charAt(data.length() - i));
         }
         long test =  System.nanoTime();
         System.out.println(start-test);
